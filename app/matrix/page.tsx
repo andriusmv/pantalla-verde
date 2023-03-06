@@ -1,3 +1,5 @@
+// Credits for this animation go to Maarten Hus with Twitter handdle @MrHus.
+
 "use client"
 
 import { useEffect, useRef } from 'react';
@@ -89,7 +91,7 @@ const MATRIX_CHARACTERS = [
   'ｸ',
 ] as const;
 
-const GREENS = ['#15803d', '#16a34a', '#22c55e', '#4ade80'] as const;
+const GREENS = ['#4fe3b7', '#38D9A9', '#38D8A9', '#38D9A4'] as const;
 
 const WHITE = '#f0fdf4';
 
@@ -190,8 +192,7 @@ export default function MatrixRainV12() {
     if (canvasRef.current) {
       const canvas = canvasRef.current;
 
-      const ctx = canvas.getContext('2d');
-
+      const ctx: CanvasRenderingContext2D = canvas.getContext("2d")!;
       ctx.font = '32px mono';
 
       const matrix: Matrix = createMatrix();
@@ -227,8 +228,8 @@ export default function MatrixRainV12() {
   }, []);
 
   return (
-    <div className="flex justify-center">
-      <canvas ref={canvasRef} width={WIDTH} height={HEIGHT} className="mb-4">
+    <div>
+      <canvas ref={canvasRef} width={WIDTH} height={HEIGHT}>
         The rain effect of the "Matrix" film
       </canvas>
     </div>
