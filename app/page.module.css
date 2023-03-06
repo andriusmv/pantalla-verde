@@ -4,7 +4,7 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 1rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -137,6 +137,13 @@
 .card2 h2 {
   margin: 0.5rem;
   font-size: 1.25rem;
+}
+
+.card2:hover,
+.card2:focus,
+.card2:active {
+  color: #38D9A9;
+  border-color: #38D9A9;
 }
 
 .logo {
