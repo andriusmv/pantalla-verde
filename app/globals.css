@@ -99,4 +99,14 @@ a {
   }
 }
 
+.avatar {
+  vertical-align: middle;
+  width: max-content;
+  height: max-content;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  margin: 1rem;
+}
+
 

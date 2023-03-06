@@ -88,7 +88,8 @@ export default function Home() {
           <span className={styles.logo}>
             AndrésMorenoVásquez
           </span>
-        </Link>
+          <div className="avatar"><Image src="/amv-memoji.jpg" alt={'amv'} width="35" height="35"/></div>
+          </Link>
       </footer>
     </div>
   )
