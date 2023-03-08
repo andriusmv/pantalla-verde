@@ -77,9 +77,9 @@ export default function Home() {
           </Link>
           
         </div>
-        <div className="image-container">
+        {/* <div className="image-container">
           <MatrixRainV12 />
-        </div>
+        </div> */}
       </main>
 
       <footer className={styles.footer}>

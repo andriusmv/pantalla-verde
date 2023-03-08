@@ -1,6 +1,5 @@
 .container {
   padding: 0 2rem;
-  max-width: max-content;
 }
 
 .main {
@@ -20,7 +19,6 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
-  vertical-align: center;
 }
 
 .footer a {
@@ -195,26 +193,3 @@
     filter: invert(1);
   }
 }
-
-.sidebar {
-  display: flex;
-}
-
-.sidebar__sidebar {
-  width: 25%;
-  
-}
-
-.sidebar__main {
-  /* Take the remaining width */
-  flex: 1;
-
-  /* Make it scrollable */
-  overflow: auto;
-}
-
-.playerWrapper {
-  max-width: 800px;
-  margin: 5 auto;
-}
-

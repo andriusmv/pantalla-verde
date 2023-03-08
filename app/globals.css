@@ -7,10 +7,15 @@ body {
   color: white;
   background: #1A1B1E;
   text-decoration-color: #38D9A9;
-  max-width: 800px;
+  max-width: none;
   align-items: center;
   justify-content: center;
   vertical-align: middle; 
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0.1px solid #38D9A9;
 }
 
 a {
@@ -37,6 +42,7 @@ a {
 
 .primary-header {
   align-items: center;
+  vertical-align: middle;
   justify-content: space-between;
   margin: 2rem;
 }
@@ -82,10 +88,6 @@ a {
   gap: var(--gap, 1rem);
 }
 
-* {
-  box-sizing: border-box;
-  outline: 0.1px solid #38D9A9;
-}
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -107,5 +109,3 @@ a {
   display: flex;
   margin: 1rem;
 }
-
-

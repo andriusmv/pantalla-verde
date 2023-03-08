@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import './globals.css'
+import { BiUserCircle } from "react-icons/Bi";
 
 export default function RootLayout({
   children,
@@ -30,6 +31,9 @@ export default function RootLayout({
               <li>
             <Link href="/pro">
               Hacerse Pro</Link>
+              </li>
+              <li>
+            <BiUserCircle size={25} />
               </li>
             </ul>
           </nav>

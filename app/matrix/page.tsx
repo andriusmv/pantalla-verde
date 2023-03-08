@@ -228,11 +228,9 @@ export default function MatrixRainV12() {
   }, []);
 
   return (
-    <div>
       <canvas ref={canvasRef} width={WIDTH} height={HEIGHT}>
         The rain effect of the "Matrix" film
       </canvas>
-    </div>
   );
 }
 
