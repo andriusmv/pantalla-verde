@@ -26,7 +26,11 @@ export default function RootLayout({
             <ul id="primary-navigation" data-visible="false" className="primary-navigation flex">
               <li>
             <Link href="/tutoriales">
-              Tutoriales</Link>
+              Cursos Gratis</Link>
+              </li>
+              <li>
+            <Link href="/courses">
+              Cursos Pro</Link>
               </li>
               <li>
             <Link href="/pro">

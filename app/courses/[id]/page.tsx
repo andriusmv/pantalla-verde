@@ -33,22 +33,15 @@ export default async function Course({
 
   return (
 
-    <><div className="playerWrapper">
-      <Player
-        playbackId={course.video_ad}
-        placeholder="fO0101O00KgKEVbWLe2tY552HMcQ02XmnuvFvOgAIvCStQI"
-        aspectRatio={"16/9"} />
-    </div><div>
-        <Link href={course.video_ad}>Video Ad</Link>
-      </div></>
+    <div key={course.id} className={styles.grid}>
+    <div className={styles.card}>
+      <h2>{course.title}</h2>
+      <p>{course.description}</p>
+    </div>
     
-      // <div key={course.id} className={styles.grid}>
-      // <div className={styles.card}>
-      //   <h2>{course.title}</h2>
-      //   <p>{course.description}</p>
-      // </div>
-      
-      // </div>  
+    </div>  
+    
+
     
   );
   }

@@ -9,12 +9,13 @@ export default async function Courses() {
     return <p>No posts found.</p>;
   }
 
-  return course.map((course) => (
-    <div key={course.id} className={styles.grid}>
-    <Link href={`/courses/${course.id}`} className={styles.card}>
+  return( 
+    <div className={styles.grid}>
+      {course.map((course) => (
+    <Link key={course.id} href={`/courses/${course.id}`} className={styles.card}>
       <h2>{course.title}</h2>
       <p>{course.description}</p>
-    </Link>
+    </Link>))}
     </div>
-  ));
+  );
 }

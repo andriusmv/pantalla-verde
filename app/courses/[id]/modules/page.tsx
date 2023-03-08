@@ -1,11 +1,11 @@
 // "use client"
 
-import supabase from "../../../utils/supabase";
+import supabase from "../../../../utils/supabase";
 import { notFound } from "next/navigation";
 import MuxPlayer from '@mux/mux-player-react'
 import Link from "next/link";
 import styles from '../page.module.css';
-import Player from "../../player";
+import Player from "../../../player";
 
 
 export default async function Modules() {
