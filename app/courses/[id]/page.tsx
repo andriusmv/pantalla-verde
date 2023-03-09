@@ -1,10 +1,14 @@
-
 import supabase from "../../../utils/supabase";
 import { notFound } from "next/navigation";
-import MuxPlayer from '@mux/mux-player-react'
+import MuxPlayer from '@mux/mux-player-react';
 import Link from "next/link";
+import Image from "next/image";
 import styles from './page.module.css'
 import Player from "../../player";
+import React from "react";
+import ReactPlayer from 'react-player/lazy';
+import Modules from "../../modules_integracion";
+import ModulesToursVirtuales from "../../modules_toursvirtuales";
 
 
 
@@ -34,11 +38,43 @@ export default async function Course({
   return (
 
     <div key={course.id} className={styles.grid}>
-    <div className={styles.card}>
-      <h2>{course.title}</h2>
-      <p>{course.description}</p>
-    </div>
-    
+    <div className={styles.container}>
+      <main className={styles.main}>
+        <p className={styles.description}>
+          {course.subtitle}
+        </p>
+        <h1 className={styles.title}>
+          {course.title}
+        </h1>
+        <p className={styles.description2}>
+          {course.description}
+        </p>
+        <div className="image-container">
+          <Image
+            src={course.thumbnail}
+            alt={course.title}
+            width={500}
+            height={281}
+            />
+        </div>
+        <div className={styles.grid}>
+          <Link href={`/courses/${course.id}/modules`} className={styles.card2}>
+            <h2>Comenzar &rarr;</h2>
+          </Link>
+          </div>
+          <div className="image-container">
+          <Image
+            src={course.thumbnail}
+            alt={course.title}
+            width={500}
+            height={281}
+            />
+        </div>
+        <div>
+        <ModulesToursVirtuales />
+        </div>
+      </main>
+      </div>
     </div>  
     
 

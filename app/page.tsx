@@ -84,7 +84,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <Link
-          href="https://twitter.com/amorenva"
+          href="https://andresmoreno.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
         >

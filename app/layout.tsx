@@ -42,7 +42,9 @@ export default function RootLayout({
             </ul>
           </nav>
         </header>
+        <main>
         {children}
+        </main>
         </body>
     </html>
   )
