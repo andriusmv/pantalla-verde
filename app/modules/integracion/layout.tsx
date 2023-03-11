@@ -7,21 +7,22 @@ export default function ModulesLayout({
   children: React.ReactNode,
 }) {
   return (
-  <div className={styles.sidebar}>
-  <aside className={styles.sidebar__sidebar}>
+    <main>{children}</main>
+  // <div className={styles.sidebar}>
+  // <aside className={styles.sidebar__sidebar}>
     
-      <ul>
-        <li>
-          <a href='/modules/toursvirtuales'>Tours Virtuales</a>
-        </li>
-        <li>
-          <a href='/modules/integracion'>Integracion</a>
-        </li>
-      </ul>
+  //     <ul>
+  //       <li>
+  //         <a href='/modules/toursvirtuales'>Tours Virtuales</a>
+  //       </li>
+  //       <li>
+  //         <a href='/modules/integracion'>Integracion</a>
+  //       </li>
+  //     </ul>
     
-  </aside>
-  <main className={styles.sidebar__main}>{children}</main>
-  </div>
+  // </aside>
+  // <main className={styles.sidebar__main}>{children}</main>
+  // </div>
   );
 }
 

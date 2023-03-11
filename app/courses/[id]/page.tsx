@@ -71,6 +71,7 @@ export default async function Course({
             />
         </div>
         <div>
+          {/* @ts-expect-error Async Server Component */}
         <ModulesToursVirtuales />
         </div>
       </main>
