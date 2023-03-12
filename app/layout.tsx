@@ -34,10 +34,11 @@ export default function RootLayout({
               </li>
               <li>
             <Link href="/pro">
-              Hacerse Pro</Link>
+              <span className='button-accent-pro'>Hacerse Pro</span></Link>
               </li>
               <li>
-            <BiUserCircle size={25} />
+            <Link href="/micuenta">
+            <BiUserCircle size={25} /></Link>
               </li>
             </ul>
           </nav>

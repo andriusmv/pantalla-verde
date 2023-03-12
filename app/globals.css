@@ -15,7 +15,7 @@ body {
 
 * {
   box-sizing: border-box;
-  outline: 0.1px solid #38D9A9;
+  outline: 0.0px solid #38D9A9;
 }
 
 a {
@@ -54,15 +54,44 @@ a {
 .primary-navigation {
   list-style: none;
   padding: 1rem;
-  margin: 0;
+  margin: 1rem;
   background: #1A1B1E;
+  overflow: inherit;
 }
 
 .primary-navigation a {
   text-decoration: none;
 }
 
-@media (max-width: 35em) {
+.primary-navigation li {
+  background: none;
+  border-radius: 4px;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.primary-navigation li:hover {
+  background: none;
+  border-radius: 4px;
+}
+
+.button-accent-pro {
+  margin: 2px;
+  padding: 4px;
+  text-align: auto;
+  font-size: inherit;
+  color: #38D9A9;
+  text-decoration: none;
+  border: 1px solid #38D9A9;
+  border-radius: 4px;
+  background-color: inherit;
+  line-break: strict;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media (max-width: 3em) {
   .primary-navigation {
     --gap: 2em;
     position: fixed;
@@ -113,6 +142,7 @@ a {
 .player-wrapper {
   position: relative;
   padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+  overflow: visible;
 }
 
 .react-player {

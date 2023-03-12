@@ -1,10 +1,20 @@
+.container {
+  padding: 0 2rem;
+  max-width: max-content;
+}
+
 .sidebar {
   display: flex;
 }
 
 .sidebar__sidebar {
   width: 25%;
-  
+}
+
+@media (max-width: 35em) {
+  .sidebar__sidebar {
+    display: none;
+  }
 }
 
 .sidebar__main {
@@ -15,7 +25,51 @@
   overflow: auto;
 }
 
+@media (max-width: 35em) {
+  .sidebar__main {
+    position: fixed;
+    overflow: visible;
+  }
+}
+
 .playerWrapper {
   max-width: 800px;
   margin: 5 auto;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.cardmodules {
+  margin: 1rem;
+  display: table-cell;
+  text-align: left;
+  color: inherit;
+  padding: 0.5rem;
+  text-decoration: none;
+  border: 0px solid #eaeaea;
+  border-radius: 10px;
+}
+
+.cardmodules:hover,
+.cardmodules:focus,
+.cardmodules:active {
+  color: #38D9A9;
+  border-color: #38D9A9;
+}
+
+.cardmodules h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.cardmodules p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.25;
 }

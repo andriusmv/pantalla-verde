@@ -16,9 +16,12 @@ async function getData() {
   return (
     <>
       {module.map((module) => (
-    <Link key={module.id} href={`/modules/${module.id}`} className={styles.card}>
-      <h3>{module.title}</h3>
+    <div key={module.id} className={styles.container}>
+    <Link href={`/modules/${module.id}`} className={styles.cardmodules}>
+      <p>{module.title}</p>
     </Link>
+    </div>
+    
           ))}
     </>
       );}
