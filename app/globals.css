@@ -159,3 +159,18 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+.video-container {
+  width: max-content;
+  height: max-content;
+  border-radius: 0px;
+  border-color: none;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  margin: auto;
+}
+
+.video-container iframe {
+  border: none;
+}

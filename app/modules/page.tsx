@@ -7,7 +7,7 @@ import styles from '../page.module.css';
 
 
 export default async function Modules() {
-  const { data: module } = await supabase.from("module").select("*");
+  const { data: module } = await supabase.from("module").select("*").order('course_id', { ascending: false });
 
   if (!module) {
     return <p>No posts found.</p>;

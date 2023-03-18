@@ -1,9 +1,10 @@
+
+import supabase from '../../../../utils/supabase';
 import { notFound } from 'next/navigation';
-import supabase from '../../../utils/supabase';
-import Player from '../../player';
-import styles from './/page.module.css';
-import React from "react";
 import Link from "next/link";
+import React from "react";
+import Player from '../../../player';
+import styles from '../../page.module.css';
 
 export async function generateStaticParams() {
     const { data: module } = await supabase.from("module").select("id");

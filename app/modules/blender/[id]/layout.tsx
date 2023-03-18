@@ -1,13 +1,16 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import supabase from '../../../utils/supabase';
-import '../../globals.css';
-import styles from './page.module.css';
+import supabase from '../../../../utils/supabase';
+import '../../../globals.css';
+import styles from '../../page.module.css';
+
+const integracion = "integracion"
 
 async function getData() {
   const { data: module } = await supabase.from("module")
   .select("*")
-  .order('course_id', { ascending: false })
+  .in('course_id', ['blender'])
+  .order('course_id', { ascending: false });
   
   if (!module) {
     notFound();
@@ -17,7 +20,7 @@ async function getData() {
     <>
       {module.map((module) => (
     <div key={module.id} className={styles.container}>
-    <Link href={`/modules/${module.id}`} className={styles.cardmodules}>
+    <Link href={`/modules/blender/${module.id}`} className={styles.cardmodules}>
       <p>{module.title}</p>
     </Link>
     </div>

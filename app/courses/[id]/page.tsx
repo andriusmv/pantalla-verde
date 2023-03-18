@@ -3,14 +3,15 @@ import { notFound } from "next/navigation";
 import MuxPlayer from '@mux/mux-player-react';
 import Link from "next/link";
 import Image from "next/image";
-import styles from './page.module.css'
+import styles from '../../page.module.css'
+import '../../globals.css';
 import Player from "../../player";
 import React from "react";
-import ReactPlayer from 'react-player/lazy';
 import Modules from "../../modules_integracion";
 import ModulesToursVirtuales from "../../modules_toursvirtuales";
-
-
+import ReactPlayer from "react-player";
+import MyPlyrVideo from "../../player-youtube";
+import YoutubeEmbed from "../../player-youtube";
 
 export async function generateStaticParams() {
   const { data: course } = await supabase.from("course").select("id");
@@ -58,33 +59,50 @@ export default async function Course({
             />
         </div>
         <div className={styles.grid}>
-          <Link href={`/courses/${course.id}/modules`} className={styles.card2}>
+          <Link href={`/modules/${course.id}`} className={styles.card2}>
             <h2>Comenzar &rarr;</h2>
           </Link>
           </div>
-          <div className="image-container">
-          <Image
-            src={course.thumbnail}
-            alt={course.title}
-            width={500}
-            height={281}
-            />
-        </div>
+          
+          <div className={styles.sidebarmini}>
+          <aside className={styles.sidebarmini__sidebar}>
+          <h2>{course.contenido_titulo}</h2>
+          <p>{course.contenido_subtitle}</p>
+          </aside>
+          <main className={styles.sidebarmini__main}>
+            <div className={styles.sidebarmini__grid}>
+              <h3>Objeto1</h3>
+              <p>Descripción y otras cosas</p>
+              
+          
+              <h3>Objeto1</h3>
+              <p>Descripción y otras cosas</p>
+              
+          
+              <h3>Objeto1</h3>
+              <p>Descripción y otras cosas</p>
+              
+          
+              <h3>Objeto1</h3>
+              <p>Descripción y otras cosas</p>
+              </div>
+          </main>
+          </div>
+          
+          <div className="container">
+          <iframe src={`https://www.youtube.com/embed/${course.embed}`} width="500" height="281,25"/>
+          </div>
         <div>
-          {/* @ts-expect-error Async Server Component */}
-        <ModulesToursVirtuales />
+        
+        <p>{id}</p>
+        <p>{course.embed}</p>
         </div>
       </main>
       </div>
     </div>  
-    
-
-    
   );
   }
-
   
-
   // <MuxPlayer
   //       playbackId="FRxFf8z1FLXwltLVmDdthrgH7vOvo02G6fo00PWixU7fc"
   //       metadata={{

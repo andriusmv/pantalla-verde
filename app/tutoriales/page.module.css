@@ -8,7 +8,7 @@
   padding: 1rem 0;
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -64,7 +64,8 @@
 .description2 {
   margin: 1rem 0;
   line-height: 1.5;
-  font-size: 1.0rem;
+  font-size: 1.5rem;
+  max-width: 800px;
 }
 
 .acento {
@@ -91,7 +92,9 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 800px;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .card {
@@ -202,61 +205,79 @@
 
 .sidebar__sidebar {
   width: 25%;
-  
+  padding-left: 1rem;
 }
 
 .sidebar__main {
   /* Take the remaining width */
   flex: 1;
+  background-color: #000000;
 
   /* Make it scrollable */
   overflow: auto;
 }
 
-.sidebarmini {
+.videocontainer {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.grid {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   max-width: 1200px;
-  margin-top: 5rem;
 }
 
-.sidebarmini__sidebar {
-  width: 70%;
-  max-width: 200px;
-  padding-right: 2rem;
+.cardmodules {
+  margin: 1rem;
+  display: table-cell;
+  text-align: left;
+  color: inherit;
+  padding: 0.5rem;
+  text-decoration: none;
+  border: 0px solid #eaeaea;
+  border-radius: 10px;
 }
 
-.sidebarmini__sidebar h2 {
+.cardmodules:hover,
+.cardmodules:focus,
+.cardmodules:active {
+  color: #38D9A9;
+  border-color: #38D9A9;
+}
+
+.cardmodules h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.cardmodules p {
   margin: 0;
+  font-size: 1rem;
+  line-height: 1.25;
 }
 
-.sidebarmini__sidebar p {
-  margin-top: 1rem;
+.containerfull {
+  padding: none;
+  flex-grow: initial;
+  border: 0px solid #38D9A9;
 }
 
-.sidebarmini__main {
-  /* Take the remaining width */
-  flex: 1;
-
-  /* Make it scrollable */
-  overflow: visible;
+.containerfull:hover,
+.containerfull:focus,
+.containerfull:active {
+  color: #38D9A9;
+  background-color: #000000;
 }
-
-.sidebarmini__grid {
-  columns: 2;
-  margin-top: 0%;
-  padding-top: 0%;
-}
-
-.sidebarmini__grid h3 {
-  margin: 0;
-}
-
-.sidebarmini__grid p {
-  margin-top: 0;
-}
-
-.playerWrapper {
-  max-width: 800px;
-  margin: 5 auto;
-}
-
