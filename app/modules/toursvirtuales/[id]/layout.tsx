@@ -8,7 +8,7 @@ async function getData() {
   const { data: module } = await supabase.from("module")
   .select("*")
   .in('course_id', ['toursvirtuales'])
-  .order('course_id', { ascending: false });
+  .order('order', { ascending: true });
   
   if (!module) {
     notFound();
@@ -18,7 +18,7 @@ async function getData() {
     <>
       {module.map((module) => (
     <div key={module.id} className={styles.container}>
-    <Link href={`/modules/${module.id}`} className={styles.cardmodules}>
+    <Link href={`/modules/toursvirtuales/${module.id}`} className={styles.cardmodules}>
       <p>{module.title}</p>
     </Link>
     </div>
