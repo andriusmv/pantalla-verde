@@ -9,11 +9,16 @@ import styles from '../../page.module.css';
 export async function generateStaticParams() {
     const { data: module } = await supabase.from("module").select("id");
 
-    return module?.map(({ id }) => ({
-      id,
-    }));
+  if (!module) {
+    return [];
   }
-  
+
+  return module.map(({ id }) => ({
+    params: {
+      id: id.toString(),
+    },
+  }));
+}
   export default async function Module({
     params: { id },
   }: {
