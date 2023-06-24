@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import MatrixRainV12 from './matrix/page'
 import styles from './page.module.css'
 
 const intro = "Estás ahí en la oficina, entregando como puedes el último diseño, el último plano, rezando un Padre Nuestro para que el render salga más rápido. Los clientes están esperando tu presentación y el estrés comienza a subir. No sabes cómo pero entregas. Tu jefe está feliz y el proyecto logró fondos para comenzar obra lo antes posible. Pero adivina qué? Ya tienes que seguir con el siguiente proyecto, y con el siguiente y el siguiente del siguiente... y así infinitamente. Y es que por más que lo intentes, siempre va a surgir algo más. Sabes que no se trata de velocidad, se trata de estrategia. Esas noticias que ves por ahí sobre inteligencia artificial, robots y cosas nuevas, te llaman la atención pero sabes que no tienes tiempo para aprender una cosa más. Si pudieras inyectártelas de una sola vez como en la Matrix lo harías, pero no sabes cómo... hasta hoy. Eso es lo que hago aquí. Te enseño en tiempo récord herramientas nuevas para que las lleves a tu oficina y te vuelvas el mago de nuevas tecnologías inmobiliarias. Location intelligence, mapas GIS, visores 3D, realidad virtual, drones y muchas cosas más."
