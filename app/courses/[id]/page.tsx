@@ -16,8 +16,14 @@ import YoutubeEmbed from "../../player-youtube";
 export async function generateStaticParams() {
   const { data: course } = await supabase.from("course").select("id");
 
-  return course?.map(({ id }) => ({
-    id,
+  if (!course) {
+    return [];
+  }
+
+  return course.map(({ id }) => ({
+    params: {
+      id: id.toString(),
+    },
   }));
 }
 
