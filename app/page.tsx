@@ -9,6 +9,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
+        <div className={styles.gridy}>
+        <div>
         <p className={styles.description}>
           Tutoriales cortos en video
         </p>
@@ -21,6 +23,9 @@ export default function Home() {
         <p className={styles.description2}>
         Inyecciones de tecnología para vender tus proyectos inmobiliarios
         </p>
+        </div>
+        <div className={styles.imagediv}>hola</div>
+        </div>
         <div className="image-container">
           <Image
             src="/city.png"

@@ -87,6 +87,23 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+.gridy {
+	display: grid;
+	padding: 1rem;
+	width: 100%;
+	gap: var(--gap);
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.imagediv {
+  width: 100%;
+  height: 100%;
+  background-image: url(/public/city.png);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
 .grid {
   display: flex;
   align-items: center;
