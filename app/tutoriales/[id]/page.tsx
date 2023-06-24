@@ -8,6 +8,10 @@ import Player from '../../player';
 export async function generateStaticParams() {
     const { data: module } = await supabase.from("module").select("id");
 
+    if (!module) {
+      return [];
+    }
+
     return module?.map(({ id }) => ({
       id,
     }));
