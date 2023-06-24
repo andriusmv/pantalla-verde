@@ -174,3 +174,15 @@ a {
 .video-container iframe {
   border: none;
 }
+
+hr {
+  display: block;
+  width:25%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  color: white;
+}
