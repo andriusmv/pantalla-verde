@@ -10,7 +10,7 @@ export default async function Tutoriales() {
   }
 
   return( 
-    <div clssName={styles.main}>
+    <div className={styles.main}>
     <div className={styles.grid}>
       {tutorial.map((tutorial) => (
     <Link key={tutorial.id} href={`/tutoriales/${tutorial.id}`} className={styles.card}>
