@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import '../globals.css'
+import styles from '../page.module.css'
+
 
 export default function Pro() {
     return(
-        <main>
+        <main className={styles.main}>
         <h1>Pro<span > /$99</span></h1>
         
         <p>Vuélvete Pro y disfruta de:</p>

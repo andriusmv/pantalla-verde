@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import './globals.css'
+import Login from './login'
 // import { BiUserCircle } from 'react-icons/Bi';
 
 export default function RootLayout({
@@ -42,6 +43,7 @@ export default function RootLayout({
               </li>
             </ul>
           </nav>
+          <Login />
         </header>
         <main>
         {children}
