@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import './globals.css'
-// import { BiUserCircle } from 'react-icons/Bi';
 
 export default function RootLayout({
   children,
@@ -38,7 +37,7 @@ export default function RootLayout({
               </li>
               <li>
             <Link href="/micuenta">
-            Me</Link>
+            <img src = "user-circle.svg" /></Link>
               </li>
             </ul>
           </nav>

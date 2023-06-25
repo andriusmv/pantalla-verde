@@ -6,7 +6,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
   background: #1A1B1E;
-  background-image: url(https://i.ibb.co/QD3ZM2y/cityfull.png);
+  background-image: url(../public/city3d.png);
   background-repeat: no-repeat;
   background-size: cover;
   text-decoration-color: #38D9A9;
@@ -34,22 +34,27 @@ a {
   position: relative;
   display: flex;
   margin: 1.5rem;
+  background-color: transparent;
 }
 
 /* primary header */
 
 .logo {
-  margin: 2rem;
-
+  margin: 1rem;
+  font-weight: bolder;
 }
 
 .primary-header {
   align-items: center;
   vertical-align: middle;
   justify-content: space-between;
-  margin: 0.25rem;
+  padding: 0;
+  margin: 1rem;
   margin-left: 15rem;
   margin-right: 10rem;
+  background-color: rgba(0, 0, 0, 0.377);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
 
 }
 
@@ -59,8 +64,10 @@ a {
 
 .primary-navigation {
   list-style: none;
-  padding: 1rem;
-  margin: 1rem;
+  padding: 0.1rem;
+  margin: 0.1rem;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
   background: transparent;
   overflow: inherit;
 }
@@ -73,7 +80,7 @@ a {
   background: none;
   border-radius: 4px;
   margin: 0;
-  padding: 0.5rem;
+  padding: 0.1rem;
   text-align: left;
 }
 
@@ -90,6 +97,21 @@ a {
   color: #38D9A9;
   text-decoration: none;
   border: 1px solid #38D9A9;
+  border-radius: 4px;
+  background-color: inherit;
+  line-break: strict;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.button-accent-normal {
+  margin: 2px;
+  padding: 4px;
+  text-align: auto;
+  font-size: inherit;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid #ffffff;
   border-radius: 4px;
   background-color: inherit;
   line-break: strict;

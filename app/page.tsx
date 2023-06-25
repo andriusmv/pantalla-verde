@@ -23,18 +23,16 @@ export default function Home() {
         <p className={styles.description2}>
         Inyecciones de tecnología para vender tus proyectos inmobiliarios
         </p>
-        <div className={styles.grid}>
-          <Link href="/signup" className={styles.card2}>
-            <h2>Comenzar &rarr;</h2>
-          </Link>
-          <Link href="/pro" className={styles.card2}>
-            <h2>Hacerse Pro &rarr;</h2>
-          </Link>
+        <div className={styles.gridy2}>
+          <Link href="/pro">
+              <span className='button-accent-normal'>Comenzar</span></Link>
+              <Link href="/pro">
+              <span className='button-accent-pro'>Hacerse Pro</span></Link>
           </div>
         </div>
         <div className="image-container">
           <Image
-            src="/city.png"
+            src="/card.svg"
             alt="3D city"
             width={450}
             height={281}
@@ -43,7 +41,7 @@ export default function Home() {
         </div>
         <div>
           <p className={styles.intro}>
-          {intro}
+          <i>{intro}</i>
           </p>
           </div>
         

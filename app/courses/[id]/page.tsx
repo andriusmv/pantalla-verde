@@ -44,7 +44,7 @@ export default async function Course({
 
   return (
 
-    <div key={course.id} className={styles.grid}>
+    <div key={course.id}>
     <div className={styles.container}>
       <main className={styles.main}>
         <p className={styles.description}>

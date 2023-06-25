@@ -34,11 +34,10 @@ export default function Lista() {
   }, []);
 
   return (
-    <div className={styles.grid}>
+    <div className={styles.gridy}>
       {modules.map((module) => (
-        <Link key={module.id} href={`/modules/toursvirtuales/${module.id}`} className={styles.card}>
-          <h2>{module.title}</h2>
-          <p>{module.description}</p>
+        <Link key={module.id} href={`/modules/toursvirtuales/${module.id}`}>
+          <p>{module.title}</p>
         </Link>
       ))}
     </div>

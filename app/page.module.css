@@ -59,6 +59,7 @@
   margin: 1rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
+  color: #38D9A9;
 }
 
 .description2 {
@@ -95,6 +96,16 @@
   max-width: 1300px;
 }
 
+.gridy2 {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin-right: 2rem;
+  justify-content: flex-start;
+}
+
 .titleimg {
   padding-right: 0rem;
   margin-right: 0rem;
@@ -127,14 +138,17 @@
 
 .card {
   margin: 1rem;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: left;
   color: inherit;
+  background-color: #ffffff34;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
+  border-radius: 5px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  max-width: 20rem;
+  height: 10rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card:hover,
@@ -142,17 +156,19 @@
 .card:active {
   color: #38D9A9;
   border-color: #38D9A9;
+  background-color: #00000031;
+
 }
 
 .card h2 {
   margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .card p {
   margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .card2 {
@@ -202,7 +218,7 @@
 
 @media (prefers-color-scheme: dark) {
   .title {
-    background: linear-gradient(180deg, #ffffff 0%, #aaaaaa 100%);
+    background: linear-gradient(45deg, #ffffff 0%, #ffffff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
