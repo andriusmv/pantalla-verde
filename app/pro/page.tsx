@@ -1,9 +1,35 @@
 import Link from 'next/link'
 import '../globals.css'
 import styles from '../page.module.css'
+import {
+    createServerActionClient,
+    createServerComponentClient,
+  } from '@supabase/auth-helpers-nextjs'
+  import { cookies } from 'next/headers'
+  import Image from 'next/image'
+  import { redirect } from 'next/navigation'
 
 
-export default function Pro() {
+export default async function Pro() {
+    const supabase = createServerComponentClient({ cookies })
+
+    const {
+      data: { user },
+    } = await supabase.auth.getUser()
+  
+    if (!user) {
+      // This route can only be accessed by authenticated users.
+      // Unauthenticated users will be redirected to the `/login` route.
+      redirect('/login')
+    }
+  
+    const signOut = async () => {
+      'use server'
+      const supabase = createServerActionClient({ cookies })
+      await supabase.auth.signOut()
+      redirect('/login')
+    }
+    
     return(
         <main className={styles.main}>
         <h1>Pro<span > /$99</span></h1>
