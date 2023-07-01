@@ -24,7 +24,7 @@ export default function Home() {
         Inyecciones de tecnología para vender tus proyectos inmobiliarios
         </p>
         <div className={styles.gridy2}>
-          <Link href="/pro">
+          <Link href="/tutoriales">
               <span className='button-accent-normal'>Comenzar</span></Link>
               <Link href="/pro">
               <span className='button-accent-pro'>Hacerse Pro</span></Link>

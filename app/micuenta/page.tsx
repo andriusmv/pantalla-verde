@@ -21,11 +21,13 @@ export default async function Index() {
       <div className={styles.main}>
         <span>
           {user ? (
-            <span>
-              Hola, {user.email}! <span></span>{' '}
+            <div className={styles.container}>
+              <span>
+              ¡Hola, {user.email}! <span></span>{' '}
               <br />
-              <LogoutButton />
             </span>
+              <LogoutButton />
+              </div>
           ) : (
             <div className={styles.container}>
               <p>No has iniciado sesión: {''}</p>

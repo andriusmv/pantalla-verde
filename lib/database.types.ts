@@ -23,6 +23,8 @@ export interface Database {
           thumbnail: string | null
           title: string | null
           video_ad: string | null
+          stripe: string | null
+
         }
         Insert: {
           contenido_subtitle?: string | null
@@ -37,6 +39,8 @@ export interface Database {
           thumbnail?: string | null
           title?: string | null
           video_ad?: string | null
+          stripe?: string | null
+
         }
         Update: {
           contenido_subtitle?: string | null
@@ -51,6 +55,8 @@ export interface Database {
           thumbnail?: string | null
           title?: string | null
           video_ad?: string | null
+          stripe?: string | null
+
         }
         Relationships: []
       }
