@@ -18,7 +18,7 @@ export default async function Index() {
         <span>Esta es tu cuenta</span>
       </h1>
 
-      <div>
+      <div className={styles.main}>
         <span>
           {user ? (
             <span>
@@ -27,9 +27,12 @@ export default async function Index() {
               <LogoutButton />
             </span>
           ) : (
+            <div className={styles.container}>
+              <p>No has iniciado sesión: {''}</p>
             <Link href="/login">
-              Login
-            </Link>
+              <span className='button-accent-normal'>
+              Iniciar sesión</span>
+            </Link></div>
           )}
         </span>
       </div>

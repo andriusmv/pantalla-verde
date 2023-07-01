@@ -5,6 +5,7 @@ import Link from "next/link";
 import React from "react";
 import Player from '../../../player';
 import styles from '../../page.module.css';
+import '../globals.css'
 
 export async function generateStaticParams() {
     const { data: module } = await supabase.from("module").select("id");

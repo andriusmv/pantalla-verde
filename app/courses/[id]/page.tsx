@@ -65,7 +65,7 @@ export default async function Course({
             />
         </div>
         <div className={styles.grid}>
-          <Link href={`/modules/${course.id}`} className={styles.card2}>
+          <Link href={course.id} className={styles.card2}>
             <h2>Comenzar &rarr;</h2>
           </Link>
           </div>

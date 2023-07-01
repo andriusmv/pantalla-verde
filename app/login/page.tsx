@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+import styles from '../page.module.css'
 
 export default function Login() {
   const [email, setEmail] = useState('')
@@ -41,10 +42,10 @@ export default function Login() {
         </p>
       ) : (
         <form
-          className="flex-1 flex flex-col w-full max-w-sm justify-center gap-2"
+          className={styles.main}
           onSubmit={view === 'sign-in' ? handleSignIn : handleSignUp}
         >
-          <label className="text-md text-neutral-400" htmlFor="email">
+          <label className={styles.description2} htmlFor="email">
             Email
           </label>
           <input
@@ -52,10 +53,10 @@ export default function Login() {
             name="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
-            placeholder="you@example.com"
+            placeholder="email@ejemplo.com"
           />
           <label className="text-md text-neutral-400" htmlFor="password">
-            Password
+            Contraseña
           </label>
           <input
             className="rounded-md px-4 py-2 bg-inherit border mb-6 text-neutral-100"
@@ -68,15 +69,15 @@ export default function Login() {
           {view === 'sign-in' ? (
             <>
               <button className="bg-green-700 rounded px-4 py-2 text-neutral-200 mb-6">
-                Sign In
+                Iniciar
               </button>
               <p className="text-sm text-neutral-500 text-center">
-                Don't have an account?
+                ¿No tienes usuario? 
                 <button
                   className="ml-1 text-white underline"
                   onClick={() => setView('sign-up')}
                 >
-                  Sign Up Now
+                  Crear uno
                 </button>
               </p>
             </>
@@ -84,15 +85,15 @@ export default function Login() {
           {view === 'sign-up' ? (
             <>
               <button className="bg-green-700 rounded px-4 py-2 text-neutral-200 mb-6">
-                Sign Up
+                Crear usuario
               </button>
               <p className="text-sm text-neutral-500 text-center">
-                Already have an account?
+                ¿Ya tienes una cuenta?
                 <button
                   className="ml-1 text-white underline"
                   onClick={() => setView('sign-in')}
                 >
-                  Sign In Now
+                  Inicia sesión
                 </button>
               </p>
             </>
