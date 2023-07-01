@@ -4,9 +4,35 @@ import MuxPlayer from '@mux/mux-player-react'
 import Link from "next/link";
 import Player from "../player";
 import styles from '../page.module.css';
+import '../globals.css'
+import {
+    createServerActionClient,
+    createServerComponentClient,
+  } from '@supabase/auth-helpers-nextjs'
+  import { cookies } from 'next/headers'
+  import Image from 'next/image'
+  import { redirect } from 'next/navigation'
 
 
 export default async function Modules() {
+  const supabase = createServerComponentClient({ cookies })
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
+  if (!user) {
+    // This route can only be accessed by authenticated users.
+    // Unauthenticated users will be redirected to the `/login` route.
+    redirect('/login')
+  }
+
+  const signOut = async () => {
+    'use server'
+    const supabase = createServerActionClient({ cookies })
+    await supabase.auth.signOut()
+    redirect('/login')
+  }
+  
   const { data: module } = await supabase.from("module").select("*").order('course_id', { ascending: false });
 
   if (!module) {
