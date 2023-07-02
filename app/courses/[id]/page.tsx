@@ -65,7 +65,7 @@ export default async function Course({
             />
         </div>
         <div className={styles.grid}>
-          <Link href="/pro" className={styles.card3}>
+          <Link href="/pro" className='button-accent-normal'>
             <h2>Comenzar &rarr;</h2>
           </Link>
           <p>{course.stripe}</p>
