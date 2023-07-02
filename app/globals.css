@@ -6,7 +6,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
   background: #1A1B1E;
-  background-image: url(../public/city3d.png);
+  /* background-image: url(../public/city3d.png); */
   background-repeat: no-repeat;
   background-size: cover;
   text-decoration-color: #38D9A9;
@@ -41,6 +41,7 @@ a {
 
 .logo {
   margin: 1rem;
+  margin-left: 3rem;
   font-weight: bolder;
 }
 
@@ -50,8 +51,6 @@ a {
   justify-content: space-between;
   padding: 0;
   margin: 1rem;
-  margin-left: 15rem;
-  margin-right: 10rem;
   background-color: rgba(0, 0, 0, 0.377);
   backdrop-filter: blur(5px);
   border-radius: 10px;

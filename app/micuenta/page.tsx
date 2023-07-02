@@ -23,7 +23,7 @@ export default async function Index() {
           {user ? (
             <div className={styles.container}>
               <span>
-              ¡Hola, {user.email}! <span></span>{' '}
+              ¡Hola, {user.email}! <br /><span>Tu id es {user.id}</span>{' '}
               <br />
             </span>
               <LogoutButton />

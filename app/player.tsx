@@ -14,17 +14,19 @@ export default function Player({
   playbackId,
   placeholder,
   aspectRatio,
+  poster,
 }: {
   playbackId: string;
   placeholder: string;
   aspectRatio: string;
+  poster: string;
 }) {
   return (
     <MuxPlayer
       streamType="on-demand"
       playbackId={playbackId}
       placeholder={placeholder}
-      title="Tea and Cookies"
+      title="Pantalla Verde"
       metadata={{
         video_id: "video-id-54321",
       }}
