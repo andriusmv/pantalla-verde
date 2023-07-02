@@ -65,7 +65,7 @@ export default async function Course({
             />
         </div>
         <div className={styles.grid}>
-          <Link href="/pro" className={styles.card2}>
+          <Link href="/pro" className={styles.card3}>
             <h2>Comenzar &rarr;</h2>
           </Link>
           <p>{course.stripe}</p>
@@ -78,31 +78,30 @@ export default async function Course({
           </aside>
           <main className={styles.sidebarmini__main}>
             <div className={styles.sidebarmini__grid}>
-              <h3>Objeto1</h3>
-              <p>Descripción y otras cosas</p>
+              <h3>Aprende haciendo</h3>
+              <p>Ejercicios prácticos con descargables</p>
               
           
-              <h3>Objeto1</h3>
-              <p>Descripción y otras cosas</p>
+              <h3>Videotutoriales</h3>
+              <p>Paso a paso y a tu ritmo</p>
               
           
-              <h3>Objeto1</h3>
-              <p>Descripción y otras cosas</p>
+              <h3>Acceso anual</h3>
+              <p>Ingresa las veces que quieras por 1 año</p>
               
           
-              <h3>Objeto1</h3>
-              <p>Descripción y otras cosas</p>
+              <h3>Preguntas</h3>
+              <p>Via correo electrónico o WhatsApp</p>
               </div>
           </main>
           </div>
           
           <div className="container">
-          <iframe src={`https://www.youtube.com/embed/${course.embed}`} width="500" height="281,25"/>
+          <iframe src={`https://www.youtube.com/embed/${course.embed}`} width="500" height="281,25" />
           </div>
         <div>
         
         <p>{id}</p>
-        <p>{course.embed}</p>
         </div>
       </main>
       </div>
