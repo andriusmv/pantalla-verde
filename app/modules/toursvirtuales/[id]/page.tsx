@@ -40,9 +40,9 @@ export async function generateStaticParams() {
   {module.map((module) => (
   <div key={module.id} className={styles.playerWrapper}>
     <Player
-      playbackId={module.video_url}
-      placeholder="fO0101O00KgKEVbWLe2tY552HMcQ02XmnuvFvOgAIvCStQI"
-      aspectRatio={"16/9"} />
+        playbackId={module.video_url}
+        poster={module.thumbnail}
+        aspectRatio={"16/9"} placeholder={''} />
     </div>
         ))}
   </>
