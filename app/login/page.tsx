@@ -18,7 +18,7 @@ export default function Login() {
       email,
       password,
       options: {
-        emailRedirectTo: `${location.origin}/auth/callback`,
+        emailRedirectTo: `https://pantallaverde.co/auth/callback`,
       },
     })
     setView('check-email')
