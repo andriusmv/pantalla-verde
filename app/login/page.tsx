@@ -30,15 +30,15 @@ export default function Login() {
       email,
       password,
     })
-    router.push('/')
+    router.push('/micuenta')
   }
 
   return (
     <div className="main">
       {view === 'check-email' ? (
         <p>
-          Check <span>{email}</span> to
-          continue signing up
+          Revisa <span>{email}</span> para
+          continuar con tu registro
         </p>
       ) : (
         <form
