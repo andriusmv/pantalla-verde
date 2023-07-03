@@ -16,7 +16,7 @@ export default function LogoutButton() {
 
   return (
     <button onClick={signOut}>
-      Logout
+      Cerrar sesión
     </button>
   )
 }

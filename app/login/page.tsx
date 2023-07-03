@@ -34,10 +34,10 @@ export default function Login() {
   }
 
   return (
-    <div className="flex-1 flex flex-col w-full max-w-sm justify-center gap-2">
+    <div className="main">
       {view === 'check-email' ? (
-        <p className="text-center text-neutral-400">
-          Check <span className="font-bold text-white">{email}</span> to
+        <p>
+          Check <span>{email}</span> to
           continue signing up
         </p>
       ) : (
@@ -49,17 +49,15 @@ export default function Login() {
             Email
           </label>
           <input
-            className="rounded-md px-4 py-2 bg-inherit border mb-6 text-neutral-100"
             name="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             placeholder="email@ejemplo.com"
           />
-          <label className="text-md text-neutral-400" htmlFor="password">
+          <label htmlFor="password">
             Contraseña
           </label>
           <input
-            className="rounded-md px-4 py-2 bg-inherit border mb-6 text-neutral-100"
             type="password"
             name="password"
             onChange={(e) => setPassword(e.target.value)}
@@ -68,13 +66,12 @@ export default function Login() {
           />
           {view === 'sign-in' ? (
             <>
-              <button className="bg-green-700 rounded px-4 py-2 text-neutral-200 mb-6">
+              <button>
                 Iniciar
               </button>
-              <p className="text-sm text-neutral-500 text-center">
+              <p>
                 ¿No tienes usuario? 
                 <button
-                  className="ml-1 text-white underline"
                   onClick={() => setView('sign-up')}
                 >
                   Crear uno
@@ -84,13 +81,12 @@ export default function Login() {
           ) : null}
           {view === 'sign-up' ? (
             <>
-              <button className="bg-green-700 rounded px-4 py-2 text-neutral-200 mb-6">
+              <button>
                 Crear usuario
               </button>
-              <p className="text-sm text-neutral-500 text-center">
+              <p>
                 ¿Ya tienes una cuenta?
                 <button
-                  className="ml-1 text-white underline"
                   onClick={() => setView('sign-in')}
                 >
                   Inicia sesión
