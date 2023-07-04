@@ -6,6 +6,8 @@ import { redirect } from 'next/navigation'
 import LogoutButton from '../logout-button'
 import styles from '../page.module.css'
 
+import type { Database } from '../../lib/database.types';
+
 export default async function Index() {
   const supabase = createServerComponentClient({ cookies })
 
@@ -21,9 +23,9 @@ export default async function Index() {
 
   const signOut = async () => {
     'use server'
-    const supabase = createServerActionClient({ cookies })
+    const supabase = createServerActionClient<Database>({ cookies })
     await supabase.auth.signOut()
-    redirect('/login')
+    revalidatePath('/')
   }
 
   return (
