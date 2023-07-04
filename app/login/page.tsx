@@ -5,12 +5,14 @@ import { useRouter } from 'next/navigation'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import styles from '../page.module.css'
 
+import type { Database } from '../../lib/database.types';
+
 export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [view, setView] = useState('sign-in')
   const router = useRouter()
-  const supabase = createClientComponentClient()
+  const supabase = createClientComponentClient<Database>()
 
   const handleSignUp = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -18,10 +20,10 @@ export default function Login() {
       email,
       password,
       options: {
-        emailRedirectTo: `https://pantallaverde.co/auth/callback`,
+        emailRedirectTo: `${location.origin}/auth/callback`,
       },
     })
-    setView('check-email')
+    router.refresh()
   }
 
   const handleSignIn = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -30,7 +32,7 @@ export default function Login() {
       email,
       password,
     })
-    router.push('/micuenta')
+    router.refresh()
   }
 
   return (
