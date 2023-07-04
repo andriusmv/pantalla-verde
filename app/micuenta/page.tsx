@@ -25,7 +25,7 @@ export default async function Index() {
     'use server'
     const supabase = createServerActionClient<Database>({ cookies })
     await supabase.auth.signOut()
-    revalidatePath('/')
+    redirect('/login')
   }
 
   return (
