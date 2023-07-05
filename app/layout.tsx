@@ -36,7 +36,7 @@ export default function RootLayout({
               <span className='button-accent-pro'>Hacerse Pro</span></Link>
               </li>
               <li>
-            <Link href="/micuenta">
+            <Link href="/pro">
             <img src = "user-circle.svg" /></Link>
               </li>
             </ul>

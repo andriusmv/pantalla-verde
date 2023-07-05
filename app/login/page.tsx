@@ -23,7 +23,7 @@ export default function Login() {
         emailRedirectTo: `${location.origin}/auth/callback`,
       },
     })
-    router.refresh()
+    setView('check-email')
   }
 
   const handleSignIn = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -32,7 +32,7 @@ export default function Login() {
       email,
       password,
     })
-    router.refresh()
+    router.push('/')
   }
 
   return (
