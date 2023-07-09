@@ -65,10 +65,9 @@ export default async function Course({
             />
         </div>
         <div className={styles.grid}>
-          <Link href="/pro" className='button-accent-normal'>
+          <Link href={course.stripe} className='button-accent-normal'>
             <h2>Comenzar &rarr;</h2>
           </Link>
-          <p>{course.stripe}</p>
           </div>
           
           <div className={styles.sidebarmini}>
@@ -101,7 +100,6 @@ export default async function Course({
           </div>
         <div>
         
-        <p>{id}</p>
         </div>
       </main>
       </div>
